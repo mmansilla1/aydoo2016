@@ -1,32 +1,20 @@
-import java.io.*;
+package ar.edu.untref.aydoo;
 
 public class FactoresPrimos {
-int numero;
 
-public FactoresPrimos(int numeroPrueba){
-	numero = numeroPrueba;
-}
+	public String descomponerEnFactoresPrimos(int numero) {
+		String factorizacion = "";
 
-public void factores(int numeroA){
-	for (int i=2;i<numeroA; i++){
-		while(numero%i==0){
-			numero=numero/i;
-			System.out.println(i+" ");
-
-			if(numero==1){
-			System.exit(0);
+		int factor = 2;
+		while (factor <= numero) {
+			if ((numero % factor) == 0) {
+				factorizacion = factorizacion + Integer.toString(factor) + " ";
+				numero = numero / factor;
+			} else {
+				factor++;
 			}
+
 		}
+		return factorizacion;
 	}
 }
-
-public static void main(String[]args)throws IOException{
-	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-	System.out.println("Ingrese el numero a factorear: ");
-        int num=Integer.parseInt(br.readLine());
-        FactoresPrimos Factor1=new FactoresPrimos(num);
-        System.out.println("Los factores primos son:");
-        Factor1.factores(num);
-		}
-}
-

@@ -1,0 +1,20 @@
+package ar.edu.untref.aydoo;
+
+public class sts {
+
+	public String descomponerEnFactoresPrimos(int numero) {
+		String factorizacion = "";
+
+		int factor = 2;
+		while (factor <= numeroAFactorizar) {
+			if ((numeroAFactorizar % factor) == 0) {
+				factorizacion = factorizacion + Integer.toString(factor) + " ";
+				numeroAFactorizar = numeroAFactorizar / factor;
+			} else {
+				factor++;
+			}
+
+		}
+		return factorizacion;
+	}
+}
