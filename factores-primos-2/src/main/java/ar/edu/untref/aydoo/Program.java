@@ -19,10 +19,10 @@ public class Program{
         case "":
         	impresionConFormato = factoresPrimos.imprimirEnFormatoPretty(numero, listaDeFactoresPrimos);
         	break;
-    	case "--format=pretty":
+    	case "--FORMAT=PRETTY":
         	impresionConFormato = factoresPrimos.imprimirEnFormatoPretty(numero, listaDeFactoresPrimos);
         	break;
-        case "--format=quiet":
+        case "--FORMAT=QUIET":
         	impresionConFormato = factoresPrimos.imprimirEnFormatoQuiet(listaDeFactoresPrimos);
         	break;
         default:

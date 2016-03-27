@@ -13,14 +13,14 @@ public class Program{
     		formatoImpresion = args[1]; 
     	}
     	FactoresPrimos factoresPrimos = new FactoresPrimos();
-    	List<Integer> listaDeFactoresPrimos = factoresPrimos.descomponerEnFactoresPrimos(numeroAFactorizar);
+    	List<Integer> listaDeFactoresPrimos = factoresPrimos.descomponerEnFactoresPrimos(numero);
     		
     	switch (formatoImpresion.toUpperCase()) {
         case "":
-        	impresionConFormato = factoresPrimos.imprimirEnFormatoPretty(numeroAFactorizar, listaDeFactoresPrimos);
+        	impresionConFormato = factoresPrimos.imprimirEnFormatoPretty(numero, listaDeFactoresPrimos);
         	break;
     	case "--format=pretty":
-        	impresionConFormato = factoresPrimos.imprimirEnFormatoPretty(numeroAFactorizar, listaDeFactoresPrimos);
+        	impresionConFormato = factoresPrimos.imprimirEnFormatoPretty(numero, listaDeFactoresPrimos);
         	break;
         case "--format=quiet":
         	impresionConFormato = factoresPrimos.imprimirEnFormatoQuiet(listaDeFactoresPrimos);
