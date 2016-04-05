@@ -9,12 +9,14 @@ public class HacedorDeCafeConLecheTest {
 	public void testPrepararEnUnVaso() {
 
 		HacedorDeCafeConLeche hacedorDeCafeConLeche = new HacedorDeCafeConLeche();
-		Vaso vaso = new Vaso();
+		Vaso vaso1 = new Vaso();
+		vaso1.agregarContenido(Contenido.CAFE);
+		vaso1.agregarContenido(Contenido.LECHE);
+		Vaso vaso2 = new Vaso();
 		
-		hacedorDeCafeConLeche.prepararEnEsteVaso(vaso);
+		vaso2 = hacedorDeCafeConLeche.prepararEnEsteVaso(vaso2);
 		
-		Assert.assertEquals(Contenido.CAFE, vaso.getContenido().get(0));
-		Assert.assertEquals(Contenido.LECHE, vaso.getContenido().get(0));
+		Assert.assertEquals(vaso1.getContenido(), vaso2.getContenido());
 		
 	}
 
