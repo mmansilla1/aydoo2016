@@ -236,17 +236,17 @@ public class IntegracionTest {
 	private List<Votante> crearListaConVotantesDePruebaBuenosAires2() {
 		
 		List<Votante> padronDeLaMesa = new ArrayList<>();
-		Votante votante1 = new Votante("Rosa", "Garcia", "DNI", "5000000");
+		Votante votante1 = new Votante("Rosa", "Garcia", "5000000");
 		padronDeLaMesa.add(votante1);
-		Votante votante2 = new Votante("Jose", "Lopez", "DNI", "31000000");
+		Votante votante2 = new Votante("Jose", "Lopez", "31000000");
 		padronDeLaMesa.add(votante2);
-		Votante votante3 = new Votante("Mateo", "Gomez", "DNI", "32000000");
+		Votante votante3 = new Votante("Mateo", "Gomez", "32000000");
 		padronDeLaMesa.add(votante3);
-		Votante votante4 = new Votante("Lucas", "Garcia", "DNI", "33000000");
+		Votante votante4 = new Votante("Lucas", "Garcia", "33000000");
 		padronDeLaMesa.add(votante4);
-		Votante votante5 = new Votante("Gabriel", "Suarez", "DNI", "34000000");
+		Votante votante5 = new Votante("Gabriel", "Suarez", "34000000");
 		padronDeLaMesa.add(votante5);
-		Votante votante6 = new Votante("Juan", "Toloza", "DNI", "38000000");
+		Votante votante6 = new Votante("Juan", "Toloza", "38000000");
 		padronDeLaMesa.add(votante6);
 		
 		return padronDeLaMesa;
