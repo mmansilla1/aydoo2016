@@ -8,7 +8,7 @@ public class HacedorDeTeConLecheTest {
 	@Test
 	public void testPrepararEnUnVaso() {
 
-		HacedorDeTeConLecheTest hacedorDeTeConLeche = new HacedorDeTeConLecheTest();
+		HacedorDeTeConLeche hacedorDeTeConLeche = new HacedorDeTeConLeche();
 		Vaso vaso1 = new Vaso();
 		vaso1.agregarContenido(Contenido.TE);
 		vaso1.agregarContenido(Contenido.LECHE);
