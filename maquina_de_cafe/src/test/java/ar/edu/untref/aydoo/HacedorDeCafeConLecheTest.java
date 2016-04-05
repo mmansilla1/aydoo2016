@@ -14,7 +14,7 @@ public class HacedorDeCafeConLecheTest {
 		vaso1.agregarContenido(Contenido.LECHE);
 		Vaso vaso2 = new Vaso();
 		
-		vaso2 = hacedorDeCafeConLeche.prepararEnEsteVaso(vaso2);
+		vaso2 = hacedorDeCafeConLeche.prepararEnEsteVaso(vaso1);
 		
 		Assert.assertEquals(vaso1.getContenido(), vaso2.getContenido());
 		
