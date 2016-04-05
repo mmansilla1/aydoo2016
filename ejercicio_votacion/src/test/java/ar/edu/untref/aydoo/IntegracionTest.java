@@ -98,7 +98,7 @@ public class IntegracionTest {
 	public void elPartidoMasVotadoEnBuenosAiresEsCAMBIEMOS(){
 		
 		CentroDeComputos centroDeComputos = new CentroDeComputos();
-		MesaElectoral mesaElectoralBuenosAires = crearMesaElectoralConVotosMacriiBuenosAires();
+		MesaElectoral mesaElectoralBuenosAires = crearMesaElectoralConVotosMacriBuenosAires();
 		MesaElectoral mesaElectoralCABA = crearMesaElectoralConVotosMacriCABA();		
 		centroDeComputos.setMesaElectoral(mesaElectoralBuenosAires);
 		centroDeComputos.setMesaElectoral(mesaElectoralCABA);
