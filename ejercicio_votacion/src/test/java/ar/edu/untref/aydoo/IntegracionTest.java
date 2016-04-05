@@ -15,7 +15,7 @@ public class IntegracionTest {
 		boolean esVotoValido = false;
 		MesaElectoral mesaElectoral = new MesaElectoral(crearListaConCandidatosDePrueba(), Provincia.BUENOSAIRES, crearListaConVotantesDePruebaBuenosAires());
 		Votante votante = new Votante("Juan", "Perez", "33333333");
-		Candidato candidatoElegido = new Candidato("Pitrola", "Nestor", Partido.OBRERO);
+		Candidato candidatoElegido = new Candidato("Macri", "Mauricio", Partido.CAMBIEMOS);
 		Voto votoElegido = new Voto(candidatoElegido);
 		votante.setVotoEmitido(votoElegido);
 	
@@ -105,7 +105,7 @@ public class IntegracionTest {
 		
 		Partido partidoMasVotadoObtenido = centroDeComputos.getPartidoMasVotadoPorProvincia(Provincia.BUENOSAIRES);
 			
-		Assert.assertEquals(Partido.FPV, partidoMasVotadoObtenido);		
+		Assert.assertEquals(Partido.CAMBIEMOS, partidoMasVotadoObtenido);		
 		
 	}	
 	
