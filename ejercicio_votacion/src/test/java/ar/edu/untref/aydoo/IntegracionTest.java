@@ -189,7 +189,7 @@ public class IntegracionTest {
 		Votante votanteActualBuenosAires;
 		while (itVotantesBuenosAires.hasNext()){
 			votanteActualBuenosAires = itVotantesBuenosAires.next(); 
-			votanteActualBuenosAires.setVotoElegido(votoScioli);
+			votanteActualBuenosAires.setVotoEmitido(votoScioli);
 			mesaElectoralBuenosAires.recibirVoto(votanteActualBuenosAires);
 		}
 		
@@ -207,7 +207,7 @@ public class IntegracionTest {
 		Votante votanteActualCABA;
 		while (itVotantesCABA.hasNext()){
 			votanteActualCABA = itVotantesCABA.next(); 
-			votanteActualCABA.setVotoElegido(votoMacri);
+			votanteActualCABA.setVotoEmitido(votoMacri);
 			mesaElectoralCABA.recibirVoto(votanteActualCABA);
 		}
 
@@ -225,7 +225,7 @@ public class IntegracionTest {
 		Votante votanteActualBuenosAires;
 		while (itVotantesBuenosAires.hasNext()){
 			votanteActualBuenosAires = itVotantesBuenosAires.next(); 
-			votanteActualBuenosAires.setVotoElegido(votoMacri);
+			votanteActualBuenosAires.setVotoEmitido(votoMacri);
 			mesaElectoralBuenosAires.recibirVoto(votanteActualBuenosAires);
 		}
 
