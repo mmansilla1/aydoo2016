@@ -215,24 +215,6 @@ public class IntegracionTest {
 		
 	}
 
-	private MesaElectoral crearMesaElectoralConVotosMacriBuenosAires(){ 
-		
-		MesaElectoral mesaElectoralBuenosAires = new MesaElectoral(crearListaConCandidatosDePrueba(), Provincia.BUENOSAIRES, crearListaConVotantesDePruebaBuenosAires2());
-		List<Votante> padronDeLaMesaBuenosAires = mesaElectoralBuenosAires.getPadronDeLaMesa();
-		Candidato candidatoMacri = new Candidato("Mauricio", "Macri", Partido.CAMBIEMOS);
-		Voto votoMacri = new Voto(candidatoMacri);
-		Iterator<Votante> itVotantesBuenosAires = padronDeLaMesaBuenosAires.iterator();
-		Votante votanteActualBuenosAires;
-		while (itVotantesBuenosAires.hasNext()){
-			votanteActualBuenosAires = itVotantesBuenosAires.next(); 
-			votanteActualBuenosAires.setVotoEmitido(votoMacri);
-			mesaElectoralBuenosAires.recibirVoto(votanteActualBuenosAires);
-		}
-
-		return mesaElectoralBuenosAires;
-		
-	}	
-	
 	private List<Votante> crearListaConVotantesDePruebaBuenosAires2() {
 		
 		List<Votante> padronDeLaMesa = new ArrayList<>();
@@ -251,6 +233,23 @@ public class IntegracionTest {
 		
 		return padronDeLaMesa;
 	}
+	
+	private MesaElectoral crearMesaElectoralConVotosMacriBuenosAires(){ 
+		
+		MesaElectoral mesaElectoralBuenosAires = new MesaElectoral(crearListaConCandidatosDePrueba(), Provincia.BUENOSAIRES, crearListaConVotantesDePruebaBuenosAires2());
+		List<Votante> padronDeLaMesaBuenosAires = mesaElectoralBuenosAires.getPadronDeLaMesa();
+		Candidato candidatoMacri = new Candidato("Mauricio", "Macri", Partido.CAMBIEMOS);
+		Voto votoMacri = new Voto(candidatoMacri);
+		Iterator<Votante> itVotantesBuenosAires = padronDeLaMesaBuenosAires.iterator();
+		Votante votanteActualBuenosAires;
+		while (itVotantesBuenosAires.hasNext()){
+			votanteActualBuenosAires = itVotantesBuenosAires.next(); 
+			votanteActualBuenosAires.setVotoEmitido(votoMacri);
+			mesaElectoralBuenosAires.recibirVoto(votanteActualBuenosAires);
+		}
 
+		return mesaElectoralBuenosAires;
+		
+	}	
 	
 }
