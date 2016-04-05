@@ -3,6 +3,7 @@ package ar.edu.untref.aydoo;
 public enum Provincia {
 
 	BUENOSAIRES,
+	CABA,
 	CATAMARCA,
 	CHACO,
 	CHUBUT,	

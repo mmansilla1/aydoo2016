@@ -17,7 +17,7 @@ public class IntegracionTest {
 		Votante votante = new Votante("Juan", "Perez", "33333333");
 		Candidato candidatoElegido = new Candidato("Pitrola", "Nestor", Partido.OBRERO);
 		Voto votoElegido = new Voto(candidatoElegido);
-		votante.setVotoElegido(votoElegido);
+		votante.setVotoEmitido(votoElegido);
 	
 		esVotoValido = mesaElectoral.esVotoValido(votante.emitirVoto());
 		
@@ -33,7 +33,7 @@ public class IntegracionTest {
 		Votante votante = new Votante("Juan", "Perez","33333333");
 		Candidato candidatoElegido = new Candidato("Carrio", "Elisa", Partido.CAMBIEMOS);
 		Voto votoElegido = new Voto(candidatoElegido);
-		votante.setVotoElegido(votoElegido);
+		votante.setVotoEmitido(votoElegido);
 	
 		esVotoValido = mesaElectoral.esVotoValido(votante.emitirVoto());
 		
@@ -49,7 +49,7 @@ public class IntegracionTest {
 		Votante votante = new Votante("Juan", "Perez", "33333333");
 		Candidato candidatoElegido = new Candidato("", "", null);
 		Voto votoElegido = new Voto(candidatoElegido);
-		votante.setVotoElegido(votoElegido);
+		votante.setVotoEmitido(votoElegido);
 	
 		esVotoValido = mesaElectoral.esVotoValido(votante.emitirVoto());
 		
@@ -68,7 +68,7 @@ public class IntegracionTest {
 		Votante votanteActual;
 		while (itVotantes.hasNext()){
 			votanteActual = itVotantes.next(); 
-			votanteActual.setVotoElegido(votoScioli);
+			votanteActual.setVotoEmitido(votoScioli);
 			mesaElectoral.recibirVoto(votanteActual);
 		}
 
