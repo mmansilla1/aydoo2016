@@ -6,8 +6,8 @@ import org.junit.Test;
 public class HacedorDeCafeConLecheTest {
 
 	@Test
-	public void testPrepararEnUnVaso() {
-
+	public void testPrepararEnEsteVaso() {
+		
 		HacedorDeCafeConLeche hacedorDeCafeConLeche = new HacedorDeCafeConLeche();
 		Vaso vaso1 = new Vaso();
 		vaso1.agregarContenido(Contenido.CAFE);

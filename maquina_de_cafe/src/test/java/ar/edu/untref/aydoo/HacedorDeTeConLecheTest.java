@@ -6,8 +6,8 @@ import org.junit.Test;
 public class HacedorDeTeConLecheTest {
 
 	@Test
-	public void testPrepararEnUnVaso() {
-
+	public void testPrepararEnEsteVaso() {
+		
 		HacedorDeTeConLeche hacedorDeTeConLeche = new HacedorDeTeConLeche();
 		Vaso vaso1 = new Vaso();
 		vaso1.agregarContenido(Contenido.TE);
@@ -19,5 +19,6 @@ public class HacedorDeTeConLecheTest {
 		Assert.assertEquals(vaso1.getContenido(), vaso2.getContenido());
 		
 	}
+		
 
 }
