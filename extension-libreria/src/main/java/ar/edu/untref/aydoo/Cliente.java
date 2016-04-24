@@ -47,7 +47,7 @@ public class Cliente {
 	
 	public void agregarALaCanasta(Comprable articulo) {
 		
-		if(this.libreria.verificarSiEstaEnStock(articulo) == true) {
+		if(this.libreria.verificarSiEstaEnStock(articulo)) {
 
 			canasta.agregarArticulo(articulo);
 		

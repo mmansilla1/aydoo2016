@@ -89,7 +89,9 @@ public class Libreria {
 			}
 
 		}
-		if (estaEnLaLista == false) throw new RuntimeException ("El cliente no esta registrado");
+		if (!estaEnLaLista) {
+			throw new RuntimeException ("El cliente no esta registrado");
+		}
 
 	}
 
