@@ -27,17 +27,15 @@ public class Cuenta {
 
 	public boolean contiene(Compra compra) {
 
-		Iterator<Compra> iteradorCompras = this.compras.iterator();
-		while (iteradorCompras.hasNext()) {
-
-			Compra actual = iteradorCompras.next();
-
-			if (actual.equals(compra)) return true;
-
+		boolean encontrado = false;
+		
+		for(int i = 0 ; i < this.compras.size() && !encontrado ; i++) {
+			
+			Compra unaCompra = this.compras.get(i);
+			encontrado = compra.equals(unaCompra);
 		}
-
-		return false;
-
+		
+		return encontrado;
 	}
 
 	public void agregarTodosLosProductosAdquiridosPorSuscripcion(Mes mes) {
