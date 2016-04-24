@@ -18,20 +18,14 @@ public class Libreria {
 
 	public void agregarProducto(Producto producto) {
 
-		//Si me viene una revista o un diario
-		if (producto.getClass().equals(Revista.class) || producto.getClass().equals(Diario.class)) {
-
-			stock.add(producto); //Agrego el producto
-			Suscripcion suscripcion = new Suscripcion((ProductoSuscribible)producto);
-			stock.add(suscripcion); //Agrego la suscripcion al diario o revista
-
-		}
-		else {
-
-			stock.add(producto);
-
-		}
-
+		stock.add(producto);
+	}
+	
+	public void agregarProducto(ProductoSuscribible producto) {
+	
+		stock.add(producto);
+		Suscripcion suscripcion = new Suscripcion((ProductoSuscribible)producto);
+		stock.add(suscripcion);
 	}
 
 
