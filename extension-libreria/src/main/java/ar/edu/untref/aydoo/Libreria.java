@@ -70,8 +70,8 @@ public class Libreria {
 
 		this.validarCliente(cliente);
 		cliente.getCuenta().agregarTodosLosProductosAdquiridosPorSuscripcion(mes);
-		double montoACobrar = cliente.getCuenta().sumarElMontoTotalDeTodosLosProductos();
-		return montoACobrar;
+		
+		return cliente.getCuenta().sumarElMontoTotalDeTodosLosProductos();
 
 	}
 
