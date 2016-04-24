@@ -44,11 +44,11 @@ public class Cuenta {
 
 		
 		Compra compraDeTodosLosArticulosSuscriptos = new Compra(mes);
-		List<Suscribible> listaDeArticulosSuscriptos = this.obtenerListaDeArticulosSuscriptosEnLaCuenta(mes);
-		Iterator<Suscribible> iteradorDeArticulosSuscriptos = listaDeArticulosSuscriptos.iterator();
+		List<ProductoSuscribible> listaDeArticulosSuscriptos = this.obtenerListaDeArticulosSuscriptosEnLaCuenta(mes);
+		Iterator<ProductoSuscribible> iteradorDeArticulosSuscriptos = listaDeArticulosSuscriptos.iterator();
 		while (iteradorDeArticulosSuscriptos.hasNext()) {
 
-			Suscribible actual = iteradorDeArticulosSuscriptos.next();
+			ProductoSuscribible actual = iteradorDeArticulosSuscriptos.next();
 			actual.aplicarDescuento(20);
 			for(int i=0; i < actual.getPeriodicidad(); i++) { //Lo agrego tantas veces como se haya comprado por la suscripcion
 				
@@ -62,9 +62,9 @@ public class Cuenta {
 	}
 
 
-	private List<Suscribible> obtenerListaDeArticulosSuscriptosEnLaCuenta(Mes mes) {
+	private List<ProductoSuscribible> obtenerListaDeArticulosSuscriptosEnLaCuenta(Mes mes) {
 
-		List<Suscribible> articulosSuscriptos = new LinkedList<Suscribible>();
+		List<ProductoSuscribible> articulosSuscriptos = new LinkedList<ProductoSuscribible>();
 		Iterator<Compra> iteradorCompras = this.compras.iterator();
 		while (iteradorCompras.hasNext()) {
 

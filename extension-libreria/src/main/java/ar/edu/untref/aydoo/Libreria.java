@@ -22,7 +22,7 @@ public class Libreria {
 		if (producto.getClass().equals(Revista.class) || producto.getClass().equals(Diario.class)) {
 
 			stock.add(producto); //Agrego el producto
-			Suscripcion suscripcion = new Suscripcion((Suscribible)producto);
+			Suscripcion suscripcion = new Suscripcion((ProductoSuscribible)producto);
 			stock.add(suscripcion); //Agrego la suscripcion al diario o revista
 
 		}

@@ -88,9 +88,9 @@ public class Compra {
 		
 	}
 	
-	public List<Suscribible> obtenerListaDeArticulosSuscribibles() {
+	public List<ProductoSuscribible> obtenerListaDeArticulosSuscribibles() {
 		
-		List<Suscribible> articulosSuscribibles = new LinkedList<Suscribible>();
+		List<ProductoSuscribible> articulosSuscribibles = new LinkedList<ProductoSuscribible>();
 		
 		Iterator<Comprable> iteradorArticulos = this.articulosComprados.iterator();
 		while (iteradorArticulos.hasNext()) {

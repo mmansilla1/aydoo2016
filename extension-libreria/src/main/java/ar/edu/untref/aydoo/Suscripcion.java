@@ -2,16 +2,16 @@ package ar.edu.untref.aydoo;
 
 public class Suscripcion implements Comprable {
 	
-	private Suscribible articulo;
+	private ProductoSuscribible articulo;
 	//Se asume que las suscripciones solo pueden ser anuales, ya que el enunciado no lo especifica
 
-	public Suscripcion(Suscribible articulo) {
+	public Suscripcion(ProductoSuscribible articulo) {
 		
 		this.articulo = articulo;
 		
 	}
 	
-	public Suscribible getArticulo() {
+	public ProductoSuscribible getArticulo() {
 		
 		return this.articulo;
 		
