@@ -1,4 +1,4 @@
-package ar.edu.untref.aydoo;
+package ar.edu.untref.aydoo.productos;
 
 public class ArticuloDeLibreria extends ProductoConIVA {
 	

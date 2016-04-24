@@ -3,6 +3,9 @@ package ar.edu.untref.aydoo;
 import org.junit.Assert;
 import org.junit.Test;
 
+import ar.edu.untref.aydoo.productos.Diario;
+import ar.edu.untref.aydoo.productos.Libro;
+
 public class ProductoTest {
 	
 	private Libro hobbit = new Libro("El Hobbit", 50);

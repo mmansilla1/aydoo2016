@@ -3,6 +3,10 @@ package ar.edu.untref.aydoo;
 import org.junit.Assert;
 import org.junit.Test;
 
+import ar.edu.untref.aydoo.productos.Diario;
+import ar.edu.untref.aydoo.productos.Revista;
+import ar.edu.untref.aydoo.productos.Suscripcion;
+
 public class SuscripcionTest {
 	
 	Revista lmd = new Revista("Le Monde Diplomatique", 4, 10);

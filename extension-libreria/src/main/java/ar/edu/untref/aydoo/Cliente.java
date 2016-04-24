@@ -1,5 +1,7 @@
 package ar.edu.untref.aydoo;
 
+import ar.edu.untref.aydoo.productos.Comprable;
+
 public class Cliente {
 
 	private String nombre;
@@ -17,33 +19,27 @@ public class Cliente {
 		this.cuenta = new Cuenta();
 		this.libreria = libreria;
 		this.canasta = new Compra();
-		
 	}
 	
 	public String getNombre() {
 		
 		return this.nombre;
-		
 	}
 	
 	public String getApellido() {
 		
 		return this.apellido;
-		
 	}
 	
 	public String getDireccion() {
 		
 		return this.direccion;
-		
 	}
 	
 	public Cuenta getCuenta() {
 		
 		return this.cuenta;
-		
 	}
-
 	
 	public void agregarALaCanasta(Comprable articulo) {
 		
@@ -51,8 +47,9 @@ public class Cliente {
 
 			canasta.agregarArticulo(articulo);
 		
+		} else {
+			throw new RuntimeException("El articulo no esta en stock");
 		}
-		else throw new RuntimeException("El articulo no esta en stock");
 		
 	}
 	
@@ -69,15 +66,10 @@ public class Cliente {
 	public boolean equals(Object obj) {
 		
 		Cliente cliente = (Cliente) obj;
-		if(this.getNombre() == cliente.getNombre() && this.getApellido() == cliente.getApellido() && this.getDireccion() == cliente.getDireccion()) {
-			
-			return true;
-			
-		}
-		return false;
 		
+		return this.getNombre() == cliente.getNombre() 
+				&& this.getApellido() == cliente.getApellido()
+				&& this.getDireccion() == cliente.getDireccion();
 	}
-
-	
 	
 }

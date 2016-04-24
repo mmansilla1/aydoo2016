@@ -4,26 +4,23 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import ar.edu.untref.aydoo.productos.Comprable;
+import ar.edu.untref.aydoo.productos.ProductoSuscribible;
+
 public class Cuenta {
 
 	//Se asume que las cuentas se renuevan cada mes. Esto lo hace la libreria
-
 	private List<Compra> compras;
 
 	public Cuenta () {
 
 		this.compras = new LinkedList<Compra>();
-
 	}
-
 
 	public void agregarCompra(Compra compra) {
 
 		this.compras.add(compra);
-
 	}
-
-
 
 	public boolean contiene(Compra compra) {
 
@@ -40,7 +37,6 @@ public class Cuenta {
 
 	public void agregarTodosLosProductosAdquiridosPorSuscripcion(Mes mes) {
 
-		
 		Compra compraDeTodosLosArticulosSuscriptos = new Compra(mes);
 		List<ProductoSuscribible> listaDeArticulosSuscriptos = this.obtenerListaDeArticulosSuscriptosEnLaCuenta(mes);
 		Iterator<ProductoSuscribible> iteradorDeArticulosSuscriptos = listaDeArticulosSuscriptos.iterator();
@@ -55,10 +51,9 @@ public class Cuenta {
 			}
 			
 		}
-		this.compras.add(compraDeTodosLosArticulosSuscriptos);
 		
+		this.compras.add(compraDeTodosLosArticulosSuscriptos);
 	}
-
 
 	private List<ProductoSuscribible> obtenerListaDeArticulosSuscriptosEnLaCuenta(Mes mes) {
 
@@ -77,9 +72,7 @@ public class Cuenta {
 		}
 
 		return articulosSuscriptos;
-
 	}
-
 
 	public double sumarElMontoTotalDeTodosLosProductos() {
 		

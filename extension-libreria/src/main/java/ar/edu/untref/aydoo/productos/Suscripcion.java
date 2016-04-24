@@ -1,4 +1,4 @@
-package ar.edu.untref.aydoo;
+package ar.edu.untref.aydoo.productos;
 
 public class Suscripcion implements Comprable {
 	
@@ -8,23 +8,18 @@ public class Suscripcion implements Comprable {
 	public Suscripcion(ProductoSuscribible articulo) {
 		
 		this.articulo = articulo;
-		
 	}
 	
 	public ProductoSuscribible getArticulo() {
 		
 		return this.articulo;
-		
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		
 		Suscripcion suscripcion = (Suscripcion) obj;
-		if(suscripcion.getArticulo().equals(this.getArticulo())) return true;
-		else return false;
+		return suscripcion.getArticulo().equals(this.getArticulo());
 	}
-	
-	
 	
 }

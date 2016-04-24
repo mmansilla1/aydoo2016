@@ -4,6 +4,11 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import ar.edu.untref.aydoo.productos.Comprable;
+import ar.edu.untref.aydoo.productos.Producto;
+import ar.edu.untref.aydoo.productos.ProductoSuscribible;
+import ar.edu.untref.aydoo.productos.Suscripcion;
+
 public class Libreria {
 
 	private List<Cliente> clientes;
@@ -32,7 +37,6 @@ public class Libreria {
 	public void registrarCliente(Cliente cliente) {
 
 		this.clientes.add(cliente);
-
 	}
 
 	public boolean verificarSiEstaEnStock(Comprable articulo) {
@@ -41,6 +45,7 @@ public class Libreria {
 		while (iteradorStock.hasNext()) {
 
 			Comprable actual = iteradorStock.next();
+			
 			if (actual.getClass().equals(articulo.getClass())) { //Si los dos tienen la misma clase
 				
 				if (actual.getClass().equals(Suscripcion.class)) { //Si los dos son suscripciones los comparo con el equals de suscripciones
@@ -57,7 +62,6 @@ public class Libreria {
 		}
 
 		return false;
-
 	}
 
 	public double calcularMontoACobrar(Mes mes, Cliente cliente) {
@@ -66,7 +70,6 @@ public class Libreria {
 		cliente.getCuenta().agregarTodosLosProductosAdquiridosPorSuscripcion(mes);
 		
 		return cliente.getCuenta().sumarElMontoTotalDeTodosLosProductos();
-
 	}
 
 	private void validarCliente(Cliente cliente) {
@@ -88,6 +91,5 @@ public class Libreria {
 		}
 
 	}
-
 
 }

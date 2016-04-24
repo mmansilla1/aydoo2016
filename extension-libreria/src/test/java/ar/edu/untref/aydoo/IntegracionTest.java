@@ -3,6 +3,12 @@ package ar.edu.untref.aydoo;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import ar.edu.untref.aydoo.productos.ArticuloDeLibreria;
+import ar.edu.untref.aydoo.productos.Diario;
+import ar.edu.untref.aydoo.productos.Libro;
+import ar.edu.untref.aydoo.productos.Revista;
+import ar.edu.untref.aydoo.productos.Suscripcion;
+
 import org.junit.Assert;
 
 public class IntegracionTest {

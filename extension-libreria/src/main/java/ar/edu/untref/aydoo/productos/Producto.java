@@ -1,4 +1,4 @@
-package ar.edu.untref.aydoo;
+package ar.edu.untref.aydoo.productos;
 
 public abstract class Producto implements Comprable {
 	
@@ -21,8 +21,7 @@ public abstract class Producto implements Comprable {
 	public boolean equals(Object obj) {
 		
 		Producto producto = (Producto) obj;
-		return producto.getNombre() == this.getNombre() 
-				&& producto.getClass().equals(this.getClass());
+		return producto.getNombre().equals(this.getNombre());
 	}
 	
 	

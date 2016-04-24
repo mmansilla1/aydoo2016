@@ -4,6 +4,11 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import ar.edu.untref.aydoo.productos.Comprable;
+import ar.edu.untref.aydoo.productos.Producto;
+import ar.edu.untref.aydoo.productos.ProductoSuscribible;
+import ar.edu.untref.aydoo.productos.Suscripcion;
+
 public class Compra {
 
 	private List<Comprable> articulosComprados;
@@ -13,20 +18,17 @@ public class Compra {
 		
 		this.articulosComprados = new LinkedList<Comprable>();
 		this.mes = mes;
-		
 	}
 	
 	//Sobrecargo el constructor para poder crear compras ficticias que luego ire llenando. Esas nunca se guardan en ningun lado
 	public Compra() {
 		
 		this.articulosComprados = new LinkedList<Comprable>();
-		
 	}
 
 	public void agregarArticulo(Comprable articulo) {
 		
 		this.articulosComprados.add(articulo);
-		
 	}
 	
 	public boolean contiene(Comprable articulo) {
@@ -56,7 +58,6 @@ public class Compra {
 		
 		//Si se termino de recorrer y no se encontraron coincidencias
 		return false;
-		
 	}
 
 	@Override
@@ -79,15 +80,8 @@ public class Compra {
 		
 		//Si termino de recorrer y no falto ninguno
 		return true;
-		
 	}
 
-	public Mes getMes() {
-		
-		return this.mes;
-		
-	}
-	
 	public List<ProductoSuscribible> obtenerListaDeArticulosSuscribibles() {
 		
 		List<ProductoSuscribible> articulosSuscribibles = new LinkedList<ProductoSuscribible>();
@@ -122,16 +116,18 @@ public class Compra {
 			}
 			
 		}
-		return montoAcumulado;
 		
+		return montoAcumulado;
+	}
+	
+	public Mes getMes() {
+		
+		return this.mes;
 	}
 
 	public void setMes(Mes mes) {
 		
 		this.mes = mes;
-		
 	}
-	
-	
 	
 }

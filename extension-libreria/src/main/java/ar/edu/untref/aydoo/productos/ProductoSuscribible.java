@@ -1,4 +1,4 @@
-package ar.edu.untref.aydoo;
+package ar.edu.untref.aydoo.productos;
 
 public abstract class ProductoSuscribible extends Producto {
 	
