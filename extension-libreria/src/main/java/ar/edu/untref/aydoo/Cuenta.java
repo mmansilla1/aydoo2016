@@ -50,8 +50,7 @@ public class Cuenta {
 			
 			}
 			
-		}
-		
+		}		
 		this.compras.add(compraDeTodosLosArticulosSuscriptos);
 	}
 

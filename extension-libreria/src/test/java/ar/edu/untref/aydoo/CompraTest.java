@@ -17,8 +17,7 @@ public class CompraTest {
 	@BeforeClass
 	public static void crearCompra() {
 		
-		Mes marzo = new Mes("Marzo");
-		compra = new Compra(marzo);
+		compra = new Compra(Mes.MARZO);
 		ArticuloDeLibreria lapiz = new ArticuloDeLibreria("Lapiz", 2);
 		Revista paparazzi = new Revista ("Paparazzi", 4, 20);
 		Suscripcion suscripcionAPaparazzi = new Suscripcion (paparazzi);
@@ -53,8 +52,7 @@ public class CompraTest {
 	@Test
 	public void queDosComprasIgualesSeanIguales() {
 		
-		Mes marzo = new Mes("Marzo");
-		Compra otraCompra = new Compra(marzo);
+		Compra otraCompra = new Compra(Mes.MARZO);
 		ArticuloDeLibreria lapiz = new ArticuloDeLibreria("Lapiz", 2);
 		Revista paparazzi = new Revista ("Paparazzi", 4, 20);
 		Suscripcion suscripcionAPaparazzi = new Suscripcion (paparazzi);
@@ -67,8 +65,7 @@ public class CompraTest {
 	@Test
 	public void queDosComprasDeDistintosArticulosSeanDistintas() {
 		
-		Mes marzo = new Mes("Marzo");
-		Compra otraCompra = new Compra(marzo);
+		Compra otraCompra = new Compra(Mes.MARZO);
 		ArticuloDeLibreria lapiz = new ArticuloDeLibreria("Lapiz", 2);
 		Libro fisicaConceptual = new Libro ("Fisica Conceptual", 250);
 		otraCompra.agregarArticulo(lapiz);
@@ -81,8 +78,7 @@ public class CompraTest {
 	@Test
 	public void queDosComprasDeDistintosMesesSeanDistintas() {
 		
-		Mes abril = new Mes("Abril");
-		Compra otraCompra = new Compra(abril);
+		Compra otraCompra = new Compra(Mes.ABRIL);
 		ArticuloDeLibreria lapiz = new ArticuloDeLibreria("Lapiz", 2);
 		Revista paparazzi = new Revista ("Paparazzi", 4, 20);
 		Suscripcion suscripcionAPaparazzi = new Suscripcion (paparazzi);

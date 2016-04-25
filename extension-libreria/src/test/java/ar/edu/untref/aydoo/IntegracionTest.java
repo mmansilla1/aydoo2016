@@ -54,10 +54,9 @@ public class IntegracionTest {
 		juan.agregarALaCanasta(lapicera);
 		juan.agregarALaCanasta(grafico);
 		
-		Mes agosto = new Mes("Agosto");
-		juan.efectuarCompra(agosto);
+		juan.efectuarCompra(Mes.AGOSTO);
 		
-		Assert.assertEquals(92.1, libreria.calcularMontoACobrar(agosto, juan),0);
+		Assert.assertEquals(92.1, libreria.calcularMontoACobrar(Mes.AGOSTO, juan),0);
 		
 	}
 	
@@ -72,18 +71,10 @@ public class IntegracionTest {
 		maria.agregarALaCanasta(suscripcionABarcelona);
 		maria.agregarALaCanasta(pagina12);
 		
-		Mes enero = new Mes("Enero");
-		maria.efectuarCompra(enero);
+		maria.efectuarCompra(Mes.ENERO);
 		
-		Assert.assertEquals(44, libreria.calcularMontoACobrar(enero, maria),0);
+		Assert.assertEquals(44, libreria.calcularMontoACobrar(Mes.ENERO, maria),0);
 		
 	}
-	
-
-	
-	
-	
-	
-
 	
 }

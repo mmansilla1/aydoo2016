@@ -59,7 +59,6 @@ public class Cliente {
 		this.canasta.setMes(mes);
 		this.cuenta.agregarCompra(this.canasta);
 		this.canasta = new Compra(mes);
-		
 	}
 
 	@Override
