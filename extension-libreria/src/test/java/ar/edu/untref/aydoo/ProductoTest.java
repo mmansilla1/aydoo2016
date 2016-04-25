@@ -3,7 +3,7 @@ package ar.edu.untref.aydoo;
 import org.junit.Assert;
 import org.junit.Test;
 
-import ar.edu.untref.aydoo.productos.Diario;
+import ar.edu.untref.aydoo.productos.Periodico;
 import ar.edu.untref.aydoo.productos.Libro;
 
 public class ProductoTest {
@@ -30,7 +30,7 @@ public class ProductoTest {
 	@Test
 	public void queDosProductosDeDistintoTipoSeanDistintos() {
 		
-		Diario nyt = new Diario("New York Times", 30, 40);
+		Periodico nyt = new Periodico("New York Times", 30, 40);
 		Assert.assertFalse(this.hobbit.equals(nyt));
 		
 	}

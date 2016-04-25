@@ -8,7 +8,7 @@ import ar.edu.untref.aydoo.productos.Alquiler;
 import ar.edu.untref.aydoo.productos.AlquilerDiario;
 import ar.edu.untref.aydoo.productos.AlquilerMensual;
 import ar.edu.untref.aydoo.productos.ArticuloDeLibreria;
-import ar.edu.untref.aydoo.productos.Diario;
+import ar.edu.untref.aydoo.productos.Periodico;
 import ar.edu.untref.aydoo.productos.Libro;
 import ar.edu.untref.aydoo.productos.Revista;
 import ar.edu.untref.aydoo.productos.Suscripcion;
@@ -26,8 +26,8 @@ public class IntegracionTest {
 		Revista grafico = new Revista("El Grafico", 1, 30);
 		Libro hobbit = new Libro("El Hobbit", 50);
 		ArticuloDeLibreria lapicera = new ArticuloDeLibreria("Lapicera", 5);
-		Diario pagina12 = new Diario("Pagina12", 30, 12);
-		Diario clarin = new Diario("Clarin", 30, 13);
+		Periodico pagina12 = new Periodico("Pagina12", 30, 12);
+		Periodico clarin = new Periodico("Clarin", 30, 13);
 		libreria.agregarProducto(barcelona);
 		libreria.agregarProducto(grafico);
 		libreria.agregarProducto(hobbit);
@@ -68,7 +68,7 @@ public class IntegracionTest {
 		Cliente maria = new Cliente(libreria, "Maria", "Dominguez", "Urquiza 245");
 		Revista barcelona = new Revista("Barcelona", 2, 20);
 		Suscripcion suscripcionABarcelona = new Suscripcion(barcelona);
-		Diario pagina12 = new Diario("Pagina12", 30, 12);
+		Periodico pagina12 = new Periodico("Pagina12", 30, 12);
 		
 		maria.agregarALaCanasta(suscripcionABarcelona);
 		maria.agregarALaCanasta(pagina12);
@@ -103,7 +103,7 @@ public class IntegracionTest {
 		Alquiler alquilerDeElHobbit = new Alquiler(hobbit, new AlquilerDiario(), 10);
 		maria.agregarALaCanasta(alquilerDeElHobbit);
 		
-		Diario pagina12 = new Diario("Pagina12", 30, 12);
+		Periodico pagina12 = new Periodico("Pagina12", 30, 12);
 		maria.agregarALaCanasta(pagina12);
 		
 		maria.efectuarCompra(Mes.ENERO);
@@ -142,7 +142,7 @@ public class IntegracionTest {
 		Suscripcion suscripcionABarcelona = new Suscripcion(barcelona);
 		maria.agregarALaCanasta(suscripcionABarcelona);
 		
-		Diario pagina12 = new Diario("Pagina12", 30, 12);
+		Periodico pagina12 = new Periodico("Pagina12", 30, 12);
 		maria.agregarALaCanasta(pagina12);
 		
 		maria.efectuarCompra(Mes.ENERO);

@@ -65,22 +65,17 @@ public class Compra {
 	public boolean equals(Object obj) {
 		
 		Compra otraCompra = (Compra) obj;
-		if (!this.mes.equals(otraCompra.getMes())) return false; //Si los meses son distintos las compras son distintas
 		
-		Iterator<Comprable> iteradorArticulosComprados = this.articulosComprados.iterator();
-		while (iteradorArticulosComprados.hasNext()) {
+		boolean sonIguales = this.mes.equals(otraCompra.getMes());
+
+		for(int i = 0; i < this.articulosComprados.size() && sonIguales; i++) {
 			
-			Comprable actual = iteradorArticulosComprados.next();
-			if (!otraCompra.contiene(actual)) { //Si aparece algun articulo que no esta en la otra compra
-				
-				return false;
-				
-			}
+			Comprable unaCompra = this.articulosComprados.get(i);
+			sonIguales = otraCompra.contiene(unaCompra);
 			
 		}
 		
-		//Si termino de recorrer y no falto ninguno
-		return true;
+		return sonIguales;
 	}
 
 	public List<ProductoSuscribible> obtenerListaDeArticulosSuscribibles() {

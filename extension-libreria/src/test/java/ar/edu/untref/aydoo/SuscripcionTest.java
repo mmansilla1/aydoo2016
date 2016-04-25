@@ -3,7 +3,7 @@ package ar.edu.untref.aydoo;
 import org.junit.Assert;
 import org.junit.Test;
 
-import ar.edu.untref.aydoo.productos.Diario;
+import ar.edu.untref.aydoo.productos.Periodico;
 import ar.edu.untref.aydoo.productos.Revista;
 import ar.edu.untref.aydoo.productos.Suscripcion;
 
@@ -32,7 +32,7 @@ public class SuscripcionTest {
 	@Test
 	public void queDosSuscripcionesAProductosDistintasSeanDistintas() {
 		
-		Diario clarin = new Diario("Clarin",30,10);
+		Periodico clarin = new Periodico("Clarin",30,10);
 		Suscripcion suscripcion = new Suscripcion(clarin);
 		Assert.assertFalse(this.suscripcionALMD.equals(suscripcion));
 		
