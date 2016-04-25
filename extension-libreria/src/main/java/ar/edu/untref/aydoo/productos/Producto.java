@@ -8,13 +8,11 @@ public abstract class Producto implements Comprable {
 	public double calcularPrecioFinal() {
 		
 		return this.precio;
-		
 	}
 	
 	public String getNombre() {
 		
 		return this.nombre;
-		
 	}
 
 	@Override
@@ -23,8 +21,5 @@ public abstract class Producto implements Comprable {
 		Producto producto = (Producto) obj;
 		return producto.getNombre().equals(this.getNombre());
 	}
-	
-	
-	
 
 }
