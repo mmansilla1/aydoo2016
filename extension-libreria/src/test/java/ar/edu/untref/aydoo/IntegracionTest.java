@@ -1,22 +1,24 @@
 package ar.edu.untref.aydoo;
 
-import org.junit.BeforeClass;
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
+import ar.edu.untref.aydoo.productos.Alquiler;
+import ar.edu.untref.aydoo.productos.AlquilerDiario;
+import ar.edu.untref.aydoo.productos.AlquilerMensual;
 import ar.edu.untref.aydoo.productos.ArticuloDeLibreria;
 import ar.edu.untref.aydoo.productos.Diario;
 import ar.edu.untref.aydoo.productos.Libro;
 import ar.edu.untref.aydoo.productos.Revista;
 import ar.edu.untref.aydoo.productos.Suscripcion;
 
-import org.junit.Assert;
-
 public class IntegracionTest {
 	
 	private static Libreria libreria;
 	
-	@BeforeClass
-	public static void prepararDatosDePrueba() {
+	@Before
+	public void prepararDatosDePrueba() {
 		
 		//Armo el stock
 		libreria = new Libreria();
@@ -75,6 +77,77 @@ public class IntegracionTest {
 		
 		Assert.assertEquals(44, libreria.calcularMontoACobrar(Mes.ENERO, maria),0);
 		
+	}
+	
+	@Test
+	public void mariaAlquilaUnLibroDiezDias() {
+		
+		Cliente maria = new Cliente(libreria, "Maria", "Dominguez", "Urquiza 245");
+		
+		Libro hobbit = new Libro("El Hobbit", 50);
+		Alquiler alquilerDeElHobbit = new Alquiler(hobbit, new AlquilerDiario(), 10);
+		
+		maria.agregarALaCanasta(alquilerDeElHobbit);
+		
+		maria.efectuarCompra(Mes.ENERO);
+		
+		Assert.assertEquals(100, libreria.calcularMontoACobrar(Mes.ENERO, maria),0);
+	}
+	
+	@Test
+	public void mariaAlquilaUnLibroDiezDiasYCompraPagina12() {
+		
+		Cliente maria = new Cliente(libreria, "Maria", "Dominguez", "Urquiza 245");
+		
+		Libro hobbit = new Libro("El Hobbit", 50);
+		Alquiler alquilerDeElHobbit = new Alquiler(hobbit, new AlquilerDiario(), 10);
+		maria.agregarALaCanasta(alquilerDeElHobbit);
+		
+		Diario pagina12 = new Diario("Pagina12", 30, 12);
+		maria.agregarALaCanasta(pagina12);
+		
+		maria.efectuarCompra(Mes.ENERO);
+		
+		Assert.assertEquals(112, libreria.calcularMontoACobrar(Mes.ENERO, maria),0);
+	}
+	
+	@Test
+	public void mariaAlquilaUnLibroDiezDiasYTieneUnaSuscripcionABarcelona() {
+		
+		Cliente maria = new Cliente(libreria, "Maria", "Dominguez", "Urquiza 245");
+		
+		Libro hobbit = new Libro("El Hobbit", 50);
+		Alquiler alquilerDeElHobbit = new Alquiler(hobbit, new AlquilerDiario(), 10);
+		maria.agregarALaCanasta(alquilerDeElHobbit);
+		
+		Revista barcelona = new Revista("Barcelona", 2, 20);
+		Suscripcion suscripcionABarcelona = new Suscripcion(barcelona);
+		maria.agregarALaCanasta(suscripcionABarcelona);
+		
+		maria.efectuarCompra(Mes.ENERO);
+		
+		Assert.assertEquals(132, libreria.calcularMontoACobrar(Mes.ENERO, maria),0);
+	}
+	
+	@Test
+	public void mariaAlquilaUnLibroDosMesesYCompraPagina12YTieneUnaSuscripcionABarcelona() {
+		
+		Cliente maria = new Cliente(libreria, "Maria", "Dominguez", "Urquiza 245");
+		
+		Libro hobbit = new Libro("El Hobbit", 50);
+		Alquiler alquilerDeElHobbit = new Alquiler(hobbit, new AlquilerMensual(), 2);
+		maria.agregarALaCanasta(alquilerDeElHobbit);
+		
+		Revista barcelona = new Revista("Barcelona", 2, 20);
+		Suscripcion suscripcionABarcelona = new Suscripcion(barcelona);
+		maria.agregarALaCanasta(suscripcionABarcelona);
+		
+		Diario pagina12 = new Diario("Pagina12", 30, 12);
+		maria.agregarALaCanasta(pagina12);
+		
+		maria.efectuarCompra(Mes.ENERO);
+		
+		Assert.assertEquals(444, libreria.calcularMontoACobrar(Mes.ENERO, maria),0);
 	}
 	
 }

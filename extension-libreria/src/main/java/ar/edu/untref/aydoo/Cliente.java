@@ -1,5 +1,6 @@
 package ar.edu.untref.aydoo;
 
+import ar.edu.untref.aydoo.productos.Alquiler;
 import ar.edu.untref.aydoo.productos.Comprable;
 
 public class Cliente {
@@ -46,6 +47,18 @@ public class Cliente {
 		if(this.libreria.verificarSiEstaEnStock(articulo)) {
 
 			canasta.agregarArticulo(articulo);
+		
+		} else {
+			throw new RuntimeException("El articulo no esta en stock");
+		}
+		
+	}
+	
+	public void agregarALaCanasta(Alquiler alquiler) {
+		
+		if(this.libreria.verificarSiEstaEnStock(alquiler.getLibro())) {
+
+			canasta.agregarArticulo(alquiler);
 		
 		} else {
 			throw new RuntimeException("El articulo no esta en stock");
