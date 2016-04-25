@@ -24,6 +24,7 @@ public class Alquiler implements Comprable {
 		return libro;
 	}
 
+	@Override
 	public double calcularPrecioFinal() {
 		return this.tipo.obtenerCosto(this.duracion);
 	}

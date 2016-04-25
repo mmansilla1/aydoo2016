@@ -5,16 +5,16 @@ public abstract class Producto implements Comprable {
 	protected String nombre;
 	protected double precio;
 	
-	public double calcularPrecioFinal() {
-		
-		return this.precio;
-	}
-	
 	public String getNombre() {
 		
 		return this.nombre;
 	}
 
+	@Override
+	public double calcularPrecioFinal() {
+		return this.precio;
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		

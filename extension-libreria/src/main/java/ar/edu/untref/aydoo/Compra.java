@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import ar.edu.untref.aydoo.productos.Alquiler;
 import ar.edu.untref.aydoo.productos.Comprable;
 import ar.edu.untref.aydoo.productos.Producto;
 import ar.edu.untref.aydoo.productos.ProductoSuscribible;
@@ -99,25 +98,13 @@ public class Compra {
 
 	public double obtenerMontoTotal() {
 		
-		double montoAcumulado=0;
+		double montoAcumulado = 0;
 		
-		Iterator<Comprable> iteradorArticulosComprados = this.articulosComprados.iterator();
-		while(iteradorArticulosComprados.hasNext()) {
+		for(Comprable articuloComprado : this.articulosComprados) {
 			
-			Comprable actual = iteradorArticulosComprados.next();
-			
-			if(actual.getClass().equals(Alquiler.class)) {
-				
-				montoAcumulado += ((Alquiler) actual).calcularPrecioFinal();
-				
-			} else if(!actual.getClass().equals(Suscripcion.class)) { //Si es una suscripcion sigue iterando sin hacer nada
-				
-				montoAcumulado += ((Producto)actual).calcularPrecioFinal();
-				
-			}
-			
+			montoAcumulado += articuloComprado.calcularPrecioFinal();
 		}
-		
+
 		return montoAcumulado;
 	}
 	
